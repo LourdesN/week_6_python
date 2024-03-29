@@ -16,5 +16,8 @@ with open('my_file.txt', 'a') as file:
         file.write('21 years old\n')
 
 
-with open('my_file.txt', 'r') as file:
+try:
+    with open('my_file.txt', 'r') as file:
         print(file.read())
+except Exception as e:
+    print(f"An error occurred during file reading: {e}")
